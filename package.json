@@ -1,6 +1,6 @@
 {
   "name": "pulsestudio",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "src/index.js",
   "engines": {
     "node": ">=20"
@@ -11,7 +11,6 @@
     "start": "node src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "fmt": "prettier -w .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,21 +19,13 @@
   "repository": "https://github.com/HostStudio/PulseStudio",
   "description": "Daemon Node.js for StackStudio : start/stop/restart, console WS, files, logs.",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dockerode": "^4.0.8",
     "dotenv": "^17.2.2",
-    "express": "^5.1.0",
-    "helmet": "^8.1.0",
-    "morgan": "^1.10.1",
-    "pino": "^9.9.5",
-    "winston": "^3.17.0",
     "ws": "^8.18.3"
   },
   "devDependencies": {
     "eslint": "^9.35.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "nodemon": "^3.1.10",
-    "pino-pretty": "^13.1.1"
+    "nodemon": "^3.1.10"
   }
 }
