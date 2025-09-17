@@ -5,4 +5,4 @@ tests
 dist
 logs
 coverage
-.idea
+.idea/*.xml
