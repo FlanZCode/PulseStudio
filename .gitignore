@@ -5,3 +5,4 @@ tests
 dist
 logs
 coverage
+.idea
