@@ -11,4 +11,3 @@ export function createHttpServer() {
     res.end('PulseStudio WebSocket Bridge online.\n');
   });
 }
-

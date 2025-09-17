@@ -1,8 +1,8 @@
-import { PORT, REMOTE_WS_URL, AUTH_TOKEN, USER_AGENT } from './config/env.js';
 import { createHttpServer } from './server/httpServer.js';
 import { createWsServer } from './server/wsServer.js';
 import { createRemoteClient } from './services/remoteClient.js';
 import { criticalError, info, warning } from './services/logManager.js';
+import { PORT, REMOTE_WS_URL, AUTH_TOKEN, USER_AGENT } from './config/env.js';
 
 if (!REMOTE_WS_URL) criticalError('REMOTE_WS_URL must be set in environment variables.');
 if (!AUTH_TOKEN) criticalError('AUTH_TOKEN must be set in environment variables.');
@@ -27,7 +27,6 @@ function shutdown() {
   info('Shutting down server...');
   try { remote.stop(); } catch {}
   try { stopWs(); } catch {}
-  server.close(() => process.exit(0));
 }
 
 process.on('SIGINT', shutdown);
